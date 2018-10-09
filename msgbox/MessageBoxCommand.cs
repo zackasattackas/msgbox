@@ -47,9 +47,9 @@ namespace msgbox
 
         private static int ShowErrorCodes()
         {
-            Console.Error.WriteLine("The following error codes are supported.\r\n");
+            Console.Out.WriteLine("The following error codes are supported.\r\n");
             foreach (var item in Enum.GetNames(typeof(DialogResult)))
-                Console.Error.WriteLine($"    {item,-8} = {(int)Enum.Parse(typeof(DialogResult), item)}");
+                Console.Out.WriteLine($"    {item,-8} = {(int)Enum.Parse(typeof(DialogResult), item)}");
 
             return 0;
         }
